@@ -1,11 +1,11 @@
 # nock_prover
 **Nockchain is a lightweight blockchain for heavyweight verifiable applications.**
 
-## Mining
+## 🚀 Getting Started with Mining
 
 1. **Download**
 
-    [Download Here](download.md)
+    📥 [Download Here](download.md)
     ```
     # ubuntu
     wget https://pub-38955235c3264999bbd95cee1430bad2.r2.dev/image/ubuntu-nockchain-x=0.1.0.tar.gz
