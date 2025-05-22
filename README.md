@@ -51,3 +51,39 @@
     ```sh
     tail -f mainnet.log
     ```
+
+## ​Transitional arrangement​
+
+1. stop mining
+```
+./stop.sh
+```
+
+2. Update `mainnet.sh` file contents
+```sh
+#!/bin/bash
+
+pids=$(ps -ef | grep ../nockchain | grep -v grep | awk '{print $2}')
+if [ -n "$pids" ]; then
+    echo "$pids" | xargs kill
+    sleep 5
+fi
+MINING_PUBKEY=$1
+
+[ ! -d "miner-node" ] && mkdir miner-node
+cd miner-node
+rm -f nockchain.sock
+
+while true; do
+    target=$(ps aux | grep ../nockchain | grep -v grep)
+    if [ -z "$target" ]; then
+        export RUST_LOG=info && ../nockchain --npc-socket nockchain.sock --mining-pubkey $MINING_PUBKEY --bind /ip4/0.0.0.0/udp/3006/quic-v1 --peer /ip4/95.216.102.60/udp/3006/quic-v1 --peer /ip4/65.108.123.225/udp/3006/quic-v1 --peer /ip4/95.216.102.60/udp/3006/quic-v1 --peer /ip4/65.108.123.225/udp/3006/quic-v1 --peer /ip4/65.109.156.108/udp/3006/quic-v1 --peer /ip4/65.21.67.175/udp/3006/quic-v1 --peer /ip4/65.109.156.172/udp/3006/quic-v1 --peer /ip4/34.174.22.166/udp/3006/quic-v1 --peer /ip4/34.95.155.151/udp/30000/quic-v1 --peer /ip4/34.18.98.38/udp/30000/quic-v1
+        sleep 5
+    fi
+    sleep 60
+done
+```
+3. restart mining
+```
+./start.sh mainnet
+```
