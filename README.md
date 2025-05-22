@@ -1,7 +1,7 @@
 # nock_prover
 **Nockchain is a lightweight blockchain for heavyweight verifiable applications. [Drpool](https://drpool.io/)**
 
-## 🚀 Getting Started with Mining
+## 🚀 Getting Started with Mining （Solo）
 
 1. **Download**
 
