@@ -49,5 +49,5 @@
 
 7. **View logs**
     ```sh
-    tail -f nockchain.log
+    tail -f mainnet.log
     ```
