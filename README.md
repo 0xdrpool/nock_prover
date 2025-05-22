@@ -8,19 +8,19 @@
     📥 [Download Here](download.md)
     ```
     # ubuntu
-    wget https://pub-38955235c3264999bbd95cee1430bad2.r2.dev/image/ubuntu-nockchain-x=0.1.0.tar.gz
+    wget https://pub-38955235c3264999bbd95cee1430bad2.r2.dev/image/ubuntu-nockchain-1.0.0.tar.gz
 
     # mac
-    wget https://pub-38955235c3264999bbd95cee1430bad2.r2.dev/image/macos-nockchain-0.1.0.tar.gz
+    wget https://pub-38955235c3264999bbd95cee1430bad2.r2.dev/image/macos-nockchain-1.0.0.tar.gz
     ```
 
 2. **Extract & Prepare** 
     ```sh
     # ubuntu
-    tar -zxvf ubuntu-nockchain-0.1.0.tar.gz && cd script
+    tar -zxvf ubuntu-nockchain-1.0.0.tar.gz && cd script
 
     # mac
-    tar -zxvf macos-nockchain-0.1.0.tar.gz && cd script
+    tar -zxvf macos-nockchain-1.0.0.tar.gz && cd script
     ```
 
 3. **Create Wallet**
@@ -39,21 +39,11 @@
 
 4. **Start**
     ```sh
-    # Run nockchain mode in leader mode
-    ./start leader
-
-    # Run nockchain mode in follower mode
-    ./start follower
-
-    # Run nockchain mode leader & follower
-    ./start leader follower
+    # Run nockchain mainnet
+    ./start mainnet
     ```
 
 5. **View logs**
     ```sh
-    # leader mode log
-    tail -f leader.log
-
-    # follower mode log
-    tail -f follower.log
+    tail -f nockchain.log
     ```
