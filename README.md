@@ -16,3 +16,7 @@
     nohup ./nock_prover -p nock.drpool.io:30128 -w drpoolaccount.xxx >> nock.log 2>&1 &
     ```
    
+## Currently Supported CPU Models
+1. AMD EPYC 7532 32-Core Processor
+2. Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz
+3. AMD EPYC 7742 64-Core Processor
